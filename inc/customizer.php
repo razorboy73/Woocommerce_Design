@@ -452,7 +452,7 @@ function style_maven_customizer($wp_customize)
         array(
             'type'              => 'theme_mod', // this will be specific to this theme .could be options as well
             'default'           => '',
-            'sanitize_callback' => ''
+            'sanitize_callback' => 'style_maven_sanitize_checkbox'
         )
     );
 

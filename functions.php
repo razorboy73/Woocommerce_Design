@@ -22,9 +22,8 @@ require_once get_template_directory() . '/inc/customizer.php';
 if (!isset($content_width))
     $content_width = 600;
 
-add_theme_support('menus');
-add_theme_support('title-tag');
 
+add_theme_support('title-tag');
 
 
 

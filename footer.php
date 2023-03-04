@@ -47,7 +47,8 @@
                     <?php
                     wp_nav_menu(
                         array(
-                            'theme_location' => 'style_maven_footer_menu'
+                            'theme_location' => 'style_maven_footer_menu',
+                            'depth' => 1
                         )
                     );
 
