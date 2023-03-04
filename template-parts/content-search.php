@@ -44,5 +44,12 @@
             <?php endif; ?>
         </p>
     </div>
-    <div><?php the_excerpt(); ?></div>
+    <!-- handles different froms of excerpts -->
+    <?php if (has_excerpt()) : ?>
+        <div class="content"><?php the_excerpt();  ?></div>
+    <?php elseif (strpos($post->post_content, '<!--more-->')) : ?>
+        <div class="content"><?php the_content('More'); ?></div>
+    <?php else : ?>
+        <div class="content"><?php the_excerpt();  ?></div>
+    <?php endif; ?>
 </article>

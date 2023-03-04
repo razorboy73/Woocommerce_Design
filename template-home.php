@@ -170,6 +170,7 @@ get_header(); ?>
                         'post_type' => 'post',
                         'posts_per_page' => 2,
                         'order' => 'ASC',
+                        'ignore_sticky_posts' => true
 
                     );
                     $blog_posts = new WP_Query($args_blog_posts);
