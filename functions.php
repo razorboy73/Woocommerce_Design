@@ -8,6 +8,9 @@
 /**
  * Register Custom Navigation Walker
  */
+
+require_once get_template_directory() . '/inc/class-tgm-plugin-activation.php';
+require_once get_template_directory() . '/inc/required-plugins.php';
 if (!file_exists(get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php')) {
     // File does not exist... return an error.
     return new WP_Error('class-wp-bootstrap-navwalker-missing', esc_html('It appears the class-wp-bootstrap-navwalker.php file may be missing.', 'style-maven'));
