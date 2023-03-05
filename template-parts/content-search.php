@@ -31,7 +31,8 @@
         ?>
     </div>
     <div class="meta">
-        <p><?php esc_html_e('Published by', 'style-maven') ?> <?php the_author_posts_link(); ?> <?php esc_html_e('on', 'style-maven'); ?> <?php echo esc_html(get_the_date()); ?>
+        <p><?php esc_html_e('Published by', 'style-maven') ?> <?php the_author_posts_link(); ?>
+            <?php esc_html_e('on', 'style-maven'); ?> <a href="<?php the_permalink() ?>"><?php echo esc_html(get_the_date()); ?></a>
             <br>
             <?php if (has_category()) : ?>
                 <?php esc_html_e('Categories', 'style-maven') ?>: <span><?php the_category(" "); ?></span>
