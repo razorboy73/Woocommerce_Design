@@ -9,8 +9,21 @@
  * Register Custom Navigation Walker
  */
 
+
+/**
+ * Enque file for TGM Plugin activiation Library
+ */
 require_once get_template_directory() . '/inc/class-tgm-plugin-activation.php';
 require_once get_template_directory() . '/inc/required-plugins.php';
+
+/**
+ * Enque one click data
+ */
+
+require_once get_template_directory() . '/demo-data/ocdi.php';
+/**
+ * Enque navwalker
+ */
 if (!file_exists(get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php')) {
     // File does not exist... return an error.
     return new WP_Error('class-wp-bootstrap-navwalker-missing', esc_html('It appears the class-wp-bootstrap-navwalker.php file may be missing.', 'style-maven'));
@@ -38,7 +51,10 @@ if (!function_exists('style_maven_scripts')) {
     {
         wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/inc/bootstrap.min.js', ['jquery'], '4.3.1', true);
         wp_enqueue_style('bootstrap-css', get_template_directory_uri() . '/inc/bootstrap.min.css', [], '4.3.1', 'all');
-        wp_enqueue_style('style-maven-style', get_stylesheet_uri(), [], filemtime(get_template_directory() . '/style.css'), 'all');
+        //themes main style sheet
+        //first line avoids caching - should not be set live
+        //wp_enqueue_style('style-maven-style', get_stylesheet_uri(), [], filemtime(get_template_directory() . '/style.css'), 'all');
+        wp_enqueue_style('style-maven-style', get_stylesheet_uri(), [], '1.0', 'all');
 
         //Flexslider files
         wp_enqueue_script('flexslider-min-js', get_template_directory_uri() . '/inc/flexslider/jquery.flexslider-min.js', ['jquery'], '', true);

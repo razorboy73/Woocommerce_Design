@@ -98,6 +98,12 @@ function style_maven_register_required_plugins()
 			'slug'      => 'woocommerce',
 			'required'  => false,
 		),
+		array(
+			'name'      => 'One Click Demo Import',
+			'slug'      => 'one-click-demo-import',
+			'required'  => false,
+		),
+
 
 		// This is an example of the use of 'is_callable' functionality. A user could - for instance -
 		// have WPSEO installed *or* WPSEO Premium. The slug would in that last case be different, i.e.
